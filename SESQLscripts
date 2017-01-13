@@ -1,0 +1,39 @@
+-- Average number of upvotes per user
+
+Declare @totalNumberOfUpvotes int
+Declare @totalNumberOfUsers float
+Declare @averageUpvotePerQuestion float
+
+select @totalNumberOfUpvotes = sum(UpVotes) FROM Users
+select @totalNumberOfUsers = count(Id) from Users
+select @averageUpvotePerQuestion = @totalNumberOfUpvotes / @totalNumberOfUsers
+
+select @averageUpvotePerQuestion as 'The average number of upvotes per user'
+
+-- Average number of answers per question
+
+Declare @totalNumberOfAnswers int
+Declare @totalNumberOfQuestions float
+Declare @averageAnswerPerQuestion float
+
+select @totalNumberOfQuestions = sum(PostTypeId) FROM Posts where PostTypeId='1';
+select @totalNumberOfAnswers = sum(PostTypeId) FROM Posts where PostTypeId='2';
+
+
+select @averageAnswerPerQuestion = @totalNumberOfAnswers / @totalNumberOfQuestions
+
+select @averageAnswerPerQuestion as 'The average number of answers per question'
+
+-- Average number of answers per person
+
+Declare @totalNumberOfAnswers int
+Declare @totalNumberOfUsers float
+Declare @averageAnswerPerUser float
+
+select @totalNumberOfUsers = count(Id) from Users
+select @totalNumberOfAnswers = sum(PostTypeId) FROM Posts where PostTypeId='2';
+
+
+select @averageAnswerPerUser = @totalNumberOfAnswers / @totalNumberOfUsers
+
+select @averageAnswerPerUser as 'The average number of answers per question'

@@ -1,0 +1,18 @@
+Consider the following data - feel free to play around with the SQL queries yourself (Links at the bottom)
+
+Average number of ______ by site
+                    upvotes/question    upvotes/user      answers/question        answers/user
+Unix&Linux          8.71                5.19                3.05                    1.81
+Stackoverflow       6.38                12.76               3.17                    6.34
+AskUbuntu           6.34                3.93                2.61                    1.62
+Linguistics         8.74                4.74                3.25                    1.76
+Superuser           6.45                4.47                2.98                    2.06
+
+My reading of the story is not upvotes in general, more like upvotes in the context of the overall userbase. Fewer of us answer fewer questions than any of the other 4 communities I picked on a whim. Not only that, but we seem to reward questions less than the other communities. If I was to make a rash judgement, I'd say we prefer to just harvest what the community has to offer but feel less inclined to contribute and to reward those who contributed.
+
+https://data.stackexchange.com/superuser/query/614178/answers-per-user
+https://data.stackexchange.com/superuser/query/614175/answers-per-question
+https://data.stackexchange.com/superuser/query/614068/upvotes-per-user
+https://data.stackexchange.com/superuser/query/613862/number-of-upvotes-per-post
+
+PS: I am tempted to make a few more queries - if you have one in mind, let us know in the comments and I'll see to it that I find the time to run the best ones as an update to this.
